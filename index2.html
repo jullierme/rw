@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="bower_components/angular/angular.js"></script>
+
+    <script src="app/app-conf.js"></script>
+    <script src="app/controller/index-controller2.js"></script>
+</head>
+<body ng-app="rw">
+    <div ng-controller="IndexController2">
+        <label>Cor</label>
+        <input ng-model="myStyle.backgroundColor">
+        <br>
+        <label>Altura</label>
+        <input ng-model="myStyle.height">
+        <br>
+        <label>Largura</label>
+        <input ng-model="myStyle.width">
+
+        <br>
+        <div ng-style="myStyle"></div>
+    </div>
+</body>
+</html>
