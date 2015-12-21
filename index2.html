@@ -8,18 +8,18 @@
     <script src="app/controller/index-controller2.js"></script>
 </head>
 <body ng-app="rw">
-    <div ng-controller="IndexController2">
+    <div ng-controller="IndexController2 as vm">
         <label>Cor</label>
-        <input ng-model="myStyle.backgroundColor">
+        <input ng-model="vm.myStyle.backgroundColor">
         <br>
         <label>Altura</label>
-        <input ng-model="myStyle.height">
+        <input ng-model="vm.myStyle.height">
         <br>
         <label>Largura</label>
-        <input ng-model="myStyle.width">
+        <input ng-model="vm.myStyle.width">
 
         <br>
-        <div ng-style="myStyle"></div>
+        <div ng-style="vm.myStyle"></div>
     </div>
 </body>
 </html>

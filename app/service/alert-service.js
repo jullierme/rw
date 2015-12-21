@@ -1,6 +1,7 @@
 angular.module('rw')
     .service('AlertService', AlertService);
 
+/* @ngInject */
 function AlertService(toastr){
     this.showSuccess = showSuccess;
     this.showError = showError;

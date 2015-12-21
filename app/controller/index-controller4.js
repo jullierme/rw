@@ -1,8 +1,7 @@
 angular.module('rw')
     .controller('IndexController4', IndexController4);
 
-IndexController4.$inject = ['$scope', '$timeout', 'AlertService', '$filter'];
-
+/* @ngInject */
 function IndexController4($scope, $timeout, AlertService, $filter){
     $scope.listaDePessoas = [];//colchetes para arrays
     $scope.entidade = {};//chaves para objetos
@@ -16,23 +15,20 @@ function IndexController4($scope, $timeout, AlertService, $filter){
         angular.forEach($scope.myForm.$error, function(error){
             angular.forEach(error, function(field){
                 field.$setTouched();
-            })
+            });
         });
     }
     function setUntouched(){
         angular.forEach($scope.myForm.$error, function(error){
             angular.forEach(error, function(field){
                 field.$setUntouched();
-            })
+            });
         });
     }
 
     function salvar(){
         var str = '';
 
-        if(typeof srt === 'string'){
-
-        }
         var dataStr = $filter('date')($scope.entidade.nascimento, 'dd/MM/yyyy');
 
         AlertService.showInfo(dataStr);
