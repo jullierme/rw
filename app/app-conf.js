@@ -6,7 +6,8 @@
             'toastr',
             'ui.grid',
             'ui.router',
-            'oc.lazyLoad'
+            'oc.lazyLoad',
+            'angular-keycode'
         ]).config(config);
 
     function config($stateProvider, $urlRouterProvider){

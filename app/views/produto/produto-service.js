@@ -3,15 +3,16 @@
 
     angular
         .module('rw')
-        .service('PessoaService', PessoaService);
+        .service('ProdutoService', ProdutoService);
 
     /* @ngInject */
-    function PessoaService(RwService) {
+    function ProdutoService(RwService) {
         var self = this;
         self.getRwService = getRwService;
 
         function getRwService(){
-            return new RwService('pessoaController');
+            var rws = new RwService('produtoController');
+            return rws;
         }
     }
 

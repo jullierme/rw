@@ -4,6 +4,7 @@
     angular.module('rw')
         .directive('rwInputText', rwInputText);
 
+    /* @ngInject */
     function rwInputText(){
         return {
             require:'^form',
@@ -26,16 +27,6 @@
             scope.myClass = 'col-sm-' + attrs.colspan;
 
             scope.inputName = scope.$id + 'inputText';
-
-            if(!scope.ngRequired){
-                scope.ngRequired = false;
-            }
-
-            iniciar();
-
-            function iniciar(){
-
-            }
         }
     }
 })();

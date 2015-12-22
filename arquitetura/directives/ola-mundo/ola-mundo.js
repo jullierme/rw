@@ -4,6 +4,7 @@
     angular.module('rw')
         .directive('olaMundo', olaMundo);
 
+    /* @ngInject */
     function olaMundo(){
         return {
             restrict: 'EA',
