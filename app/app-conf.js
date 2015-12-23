@@ -21,7 +21,8 @@
             'rwDirecives',
             'rwServices',
             'rwControllers',
-            'LocalStorageModule'
+            'LocalStorageModule',
+            'angular-loading-bar'
         ]).config(config);
 
     function config($stateProvider, $urlRouterProvider, localStorageServiceProvider){
