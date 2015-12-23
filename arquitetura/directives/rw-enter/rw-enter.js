@@ -1,7 +1,7 @@
 (function(){
     'use strict';
 
-    angular.module('rw')
+    angular.module('rwDirecives')
         .directive('rwEnter', rwEnter);
 
     /* @ngInject */

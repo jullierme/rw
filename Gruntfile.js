@@ -97,6 +97,17 @@
                         }
                     ]
                 }
+            },
+            ngdocs: {
+                options: {
+                    dest: 'docs',
+                    title: 'Documentação Rw',
+                    html5Mode: false
+                },
+                arquitetura: {
+                    src: ['arquitetura/**/*.js'],
+                    title: 'API'
+                }
             }
         });
 

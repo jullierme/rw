@@ -1,5 +1,15 @@
 (function(){
     'use strict';
+
+    angular
+        .module('rwDirecives', []);
+
+    angular
+        .module('rwServices', []);
+
+    angular
+        .module('rwControllers', []);
+
     angular
         .module('rw', [
             'ngMessages',
@@ -7,7 +17,10 @@
             'ui.grid',
             'ui.router',
             'oc.lazyLoad',
-            'angular-keycode'
+            'angular-keycode',
+            'rwDirecives',
+            'rwServices',
+            'rwControllers'
         ]).config(config);
 
     function config($stateProvider, $urlRouterProvider){
