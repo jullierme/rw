@@ -20,10 +20,14 @@
             'angular-keycode',
             'rwDirecives',
             'rwServices',
-            'rwControllers'
+            'rwControllers',
+            'LocalStorageModule'
         ]).config(config);
 
-    function config($stateProvider, $urlRouterProvider){
+    function config($stateProvider, $urlRouterProvider, localStorageServiceProvider){
+
+        localStorageServiceProvider.setPrefix('rw');
+
         var home = {
             url: '/',
             templateUrl: 'app/views/home/home.html'

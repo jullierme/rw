@@ -108,6 +108,13 @@
                     src: ['arquitetura/**/*.js'],
                     title: 'API'
                 }
+            },
+            less: {
+                arquitetura: {
+                    files: {
+                        'arquitetura/style/rw-style.css': 'arquitetura/style/rw-style.less'
+                    }
+                }
             }
         });
 
