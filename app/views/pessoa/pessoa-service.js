@@ -18,7 +18,7 @@
         function getListaDePessoas(){
             var deferred  = $q.defer();
 
-            if(1 === 1){
+            if(1 === 2){
                 deferred.reject('Motivo da rejeição');
 
                 return deferred.promise;

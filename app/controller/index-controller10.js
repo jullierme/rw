@@ -5,7 +5,7 @@
         .controller('IndexController10', IndexController10);
 
     /* @ngInject */
-    function IndexController10(PessoaService) {
+    function IndexController10(PessoaService, AlertService) {
         var vm = this;
         vm.carregarDados = carregarDados;
         vm.gridOptions = {};
@@ -27,6 +27,7 @@
         }
 
         function carregarDadosFault(response){
+            AlertService.showError(response);
         }
     }
 })();
