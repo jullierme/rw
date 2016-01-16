@@ -37,7 +37,7 @@
         var pessoa = {
             abstract: true,
             url: '/pessoa',
-            template: '<ui-view/>'
+            templateUrl: 'app/views/pessoa/pessoa.html'
         };
 
         var cadastroPessoa = {
@@ -60,11 +60,18 @@
             };
         }
 
+
+        var cadastroPessoa2 = {
+            url: '/cadastro-pessoa',
+            templateUrl: 'app/views/pessoa/cadastro-pessoa.html',
+            resolve: resolveDeps('app/views/pessoa/cadastro-pessoa-controller.js')
+        };
         $stateProvider
             .state('home', home)
             .state('pessoa', pessoa)
             .state('pessoa.cadastro', cadastroPessoa)
-            .state('pessoa.pesquisa', pesquisaPessoa);
+            .state('pessoa.pesquisa', pesquisaPessoa)
+            .state('cadastro-pessoa', cadastroPessoa2);
 
         $urlRouterProvider.otherwise('/');
     }
